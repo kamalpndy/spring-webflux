@@ -1,6 +1,7 @@
 package com.spiderinjava.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,9 @@ import com.spiderinjava.demo.service.EmployeeService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
  
+@Configuration
 @RestController
+@RequestMapping("/employee/v1")
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
